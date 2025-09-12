@@ -1,0 +1,159 @@
+2025-09-04 16:24:27:2427 [31merror[39m: [31mError occurred: Include unexpected. Element has to be either a Model, an Association or an object.[39m
+2025-09-04 16:26:09:269 [31merror[39m: [31mError occurred: Include unexpected. Element has to be either a Model, an Association or an object.[39m
+2025-09-04 16:26:09:269 [31merror[39m: [31mError occurred: Include unexpected. Element has to be either a Model, an Association or an object.[39m
+2025-09-04 16:27:39:2739 [31merror[39m: [31mError occurred: Include unexpected. Element has to be either a Model, an Association or an object.[39m
+2025-09-04 16:30:44:3044 [31merror[39m: [31mError occurred: Unknown column 'role.role_id' in 'field list'[39m
+2025-09-04 17:51:15:5115 [31merror[39m: [31mError occurred: Invalid username or password.[39m
+2025-09-04 17:51:38:5138 [31merror[39m: [31mError occurred: Invalid username or password.[39m
+2025-09-04 17:52:49:5249 [31merror[39m: [31mError occurred: Invalid username or password.[39m
+2025-09-04 17:53:14:5314 [31merror[39m: [31mError occurred: Invalid username or password.[39m
+2025-09-04 18:01:22:122 [31merror[39m: [31mError occurred: Cannot read properties of undefined (reading 'role_id')[39m
+2025-09-04 19:05:30:530 [31merror[39m: [31mError occurred: connect ETIMEDOUT 18.138.101.173:3306[39m
+2025-09-09 09:27:51:2751 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-09 09:28:28:2828 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-09 13:56:55:5655 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-09 15:02:52:252 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-09 16:16:13:1613 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-09 16:24:34:2434 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-10 15:26:24:2624 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-10 15:26:43:2643 [31merror[39m: [31mError occurred: Invalid username or password.[39m
+2025-09-10 15:26:52:2652 [31merror[39m: [31mError occurred: Invalid username or password.[39m
+2025-09-10 16:42:44:4244 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-10 16:45:12:4512 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-10 16:46:14:4614 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-10 16:46:44:4644 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-10 17:19:26:1926 [31merror[39m: [31mError occurred: Cannot read properties of undefined (reading 'findAll')[39m
+2025-09-10 17:44:15:4415 [31merror[39m: [31mError occurred: Cannot read properties of undefined (reading 'findAll')[39m
+2025-09-10 18:37:36:3736 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-10 18:40:27:4027 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-10 18:40:30:4030 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-10 18:40:30:4030 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-10 18:40:30:4030 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-10 18:40:36:4036 [31merror[39m: [31mError occurred: Include unexpected. Element has to be either a Model, an Association or an object.[39m
+2025-09-10 18:40:38:4038 [31merror[39m: [31mError occurred: Include unexpected. Element has to be either a Model, an Association or an object.[39m
+2025-09-10 18:42:01:421 [31merror[39m: [31mError occurred: Include unexpected. Element has to be either a Model, an Association or an object.[39m
+2025-09-11 15:22:24:2224 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-11 15:22:24:2224 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-11 15:22:24:2224 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-11 15:22:24:2224 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-11 15:46:15:4615 [31merror[39m: [31mError occurred: [[39m
+[31m  {[39m
+[31m    "expected": "number",[39m
+[31m    "code": "invalid_type",[39m
+[31m    "path": [[39m
+[31m      "page"[39m
+[31m    ],[39m
+[31m    "message": "Invalid input: expected number, received string"[39m
+[31m  },[39m
+[31m  {[39m
+[31m    "expected": "number",[39m
+[31m    "code": "invalid_type",[39m
+[31m    "path": [[39m
+[31m      "totalPage"[39m
+[31m    ],[39m
+[31m    "message": "Invalid input: expected number, received undefined"[39m
+[31m  }[39m
+[31m][39m
+2025-09-11 15:49:45:4945 [31merror[39m: [31mError occurred: [[39m
+[31m  {[39m
+[31m    "expected": "string",[39m
+[31m    "code": "invalid_type",[39m
+[31m    "path": [[39m
+[31m      "totalPage"[39m
+[31m    ],[39m
+[31m    "message": "Invalid input: expected string, received undefined"[39m
+[31m  }[39m
+[31m][39m
+2025-09-11 15:51:15:5115 [31merror[39m: [31mError occurred: [[39m
+[31m  {[39m
+[31m    "expected": "string",[39m
+[31m    "code": "invalid_type",[39m
+[31m    "path": [[39m
+[31m      "totalPage"[39m
+[31m    ],[39m
+[31m    "message": "Invalid input: expected string, received undefined"[39m
+[31m  }[39m
+[31m][39m
+2025-09-11 15:51:23:5123 [31merror[39m: [31mError occurred: [[39m
+[31m  {[39m
+[31m    "expected": "string",[39m
+[31m    "code": "invalid_type",[39m
+[31m    "path": [[39m
+[31m      "totalPage"[39m
+[31m    ],[39m
+[31m    "message": "Invalid input: expected string, received undefined"[39m
+[31m  }[39m
+[31m][39m
+2025-09-11 15:51:49:5149 [31merror[39m: [31mError occurred: [[39m
+[31m  {[39m
+[31m    "expected": "string",[39m
+[31m    "code": "invalid_type",[39m
+[31m    "path": [[39m
+[31m      "limit"[39m
+[31m    ],[39m
+[31m    "message": "Invalid input: expected string, received undefined"[39m
+[31m  }[39m
+[31m][39m
+2025-09-11 15:52:05:525 [31merror[39m: [31mError occurred: [[39m
+[31m  {[39m
+[31m    "expected": "string",[39m
+[31m    "code": "invalid_type",[39m
+[31m    "path": [[39m
+[31m      "limit"[39m
+[31m    ],[39m
+[31m    "message": "Invalid input: expected string, received undefined"[39m
+[31m  }[39m
+[31m][39m
+2025-09-11 15:52:16:5216 [31merror[39m: [31mError occurred: [[39m
+[31m  {[39m
+[31m    "expected": "string",[39m
+[31m    "code": "invalid_type",[39m
+[31m    "path": [[39m
+[31m      "limit"[39m
+[31m    ],[39m
+[31m    "message": "Invalid input: expected string, received undefined"[39m
+[31m  }[39m
+[31m][39m
+2025-09-11 15:52:18:5218 [31merror[39m: [31mError occurred: [[39m
+[31m  {[39m
+[31m    "expected": "string",[39m
+[31m    "code": "invalid_type",[39m
+[31m    "path": [[39m
+[31m      "limit"[39m
+[31m    ],[39m
+[31m    "message": "Invalid input: expected string, received undefined"[39m
+[31m  }[39m
+[31m][39m
+2025-09-11 16:51:19:5119 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-11 16:51:19:5119 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-11 16:51:19:5119 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-11 16:51:19:5119 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-11 16:51:19:5119 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-11 17:56:30:5630 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-11 17:56:30:5630 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-11 17:56:30:5630 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-11 17:56:30:5630 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-11 17:56:30:5630 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-11 18:08:53:853 [31merror[39m: [31mError occurred: WHERE parameter "location" has invalid "undefined" value[39m
+2025-09-11 18:09:17:917 [31merror[39m: [31mError occurred: WHERE parameter "location" has invalid "undefined" value[39m
+2025-09-11 18:09:31:931 [31merror[39m: [31mError occurred: Unknown column 'booking_request_hdr_tbl.delivery_date_from' in 'where clause'[39m
+2025-09-11 18:11:11:1111 [31merror[39m: [31mError occurred: The client is closed[39m
+2025-09-11 18:11:11:1111 [31merror[39m: [31mError occurred: The client is closed[39m
+2025-09-11 18:11:11:1111 [31merror[39m: [31mError occurred: The client is closed[39m
+2025-09-11 18:11:11:1111 [31merror[39m: [31mError occurred: The client is closed[39m
+2025-09-11 18:11:11:1111 [31merror[39m: [31mError occurred: The client is closed[39m
+2025-09-11 18:11:52:1152 [31merror[39m: [31mError occurred: Unknown column 'booking_request_hdr_tbl.location' in 'where clause'[39m
+2025-09-12 12:30:06:306 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-12 12:30:06:306 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-12 12:30:06:306 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-12 12:30:06:306 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-12 12:30:06:306 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-12 13:39:00:390 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-12 14:30:52:3052 [31merror[39m: [31mError occurred: location is not defined[39m
+2025-09-12 14:31:47:3147 [31merror[39m: [31mError occurred: location is not defined[39m
+2025-09-12 15:55:05:555 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-12 15:55:05:555 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-12 16:56:13:5613 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-12 16:56:13:5613 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-12 16:56:13:5613 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-12 16:56:33:5633 [31merror[39m: [31mError occurred: Unknown column 'sorting_tbl.assigned' in 'where clause'[39m
