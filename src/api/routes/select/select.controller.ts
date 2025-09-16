@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from 'express';
 import * as locationService from '../../../services/location.service';
 import * as ShipPointService from '../../../services/ship-point.service';
 import * as PrincipalService from '../../../services/principal.service';
-
+import * as ServiceTypeService from '../../../services/service-type.service';
 interface controllerInterface {
     (req:Request, response: Response, next: NextFunction): void
 }
@@ -65,6 +65,24 @@ export const getPrincipals: controllerInterface = async(req,res,next) => {
             }
         }));
     }   
+    catch(e){
+        next(e)
+    }
+}
+
+export const getServiceTypes: controllerInterface = async(req,res,next) => {
+    try{
+        const data = await ServiceTypeService.getServiceTypes({})
+
+        res.status(200).json(
+            data.map((item:any) => {
+                return {
+                    label: item.service_type+'-'+item.service_type_desc, 
+                    value: item.service_type
+                }
+            })
+        )
+    }
     catch(e){
         next(e)
     }

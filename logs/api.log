@@ -2485,3 +2485,359 @@
 2025-09-12 17:03:34:334 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
 2025-09-12 17:03:35:335 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 304[39m
 2025-09-12 17:03:35:335 [36minfo[39m: [36mRequest finished: GET /pod-sorting/barcode?page=0&limit=10&search= - Status: 304[39m
+2025-09-12 17:16:17:1617 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-12 17:16:17:1617 [36minfo[39m: [36mIncoming request: GET /pod-sorting/barcode?page=0&limit=10&search=[39m
+2025-09-12 17:16:17:1617 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-12 17:16:18:1618 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
+2025-09-12 17:16:18:1618 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 304[39m
+2025-09-12 17:16:18:1618 [36minfo[39m: [36mRequest finished: GET /pod-sorting/barcode?page=0&limit=10&search= - Status: 304[39m
+2025-09-15 15:06:03:63 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 15:06:05:65 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 15:06:05:65 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 15:06:07:67 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-15 15:06:07:67 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-15 15:06:07:67 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 500[39m
+2025-09-15 15:06:07:67 [36minfo[39m: [36mIncoming request: GET /pod-view?page=0&limit=10&search=&delivery_date_from=2025-09-15&delivery_date_to=2025-09-15[39m
+2025-09-15 15:06:07:67 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-15 15:06:07:67 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-15 15:06:07:67 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-15 15:06:07:67 [36minfo[39m: [36mRequest finished: GET /pod-view?page=0&limit=10&search=&delivery_date_from=2025-09-15&delivery_date_to=2025-09-15 - Status: 500[39m
+2025-09-15 15:06:07:67 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-15 15:06:07:67 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 500[39m
+2025-09-15 15:06:07:67 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-15 15:06:07:67 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-15 15:06:07:67 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 500[39m
+2025-09-15 15:06:07:67 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-15 15:06:07:67 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 500[39m
+2025-09-15 15:37:25:3725 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 15:37:26:3726 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 15:37:26:3726 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 15:37:37:3737 [36minfo[39m: [36mIncoming request: POST /auth/login[39m
+2025-09-15 15:37:38:3738 [36minfo[39m: [36mRequest finished: POST /auth/login - Status: 200[39m
+2025-09-15 15:37:38:3738 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-15 15:37:38:3738 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 200[39m
+2025-09-15 15:39:13:3913 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-15 15:39:14:3914 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
+2025-09-15 15:51:45:5145 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-15 15:51:45:5145 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-15 15:51:45:5145 [36minfo[39m: [36mIncoming request: GET /pod-view?page=0&limit=10&search=&delivery_date_from=2025-09-15&delivery_date_to=2025-09-15[39m
+2025-09-15 15:51:45:5145 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-15 15:51:46:5146 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 200[39m
+2025-09-15 15:51:46:5146 [36minfo[39m: [36mRequest finished: GET /pod-view?page=0&limit=10&search=&delivery_date_from=2025-09-15&delivery_date_to=2025-09-15 - Status: 200[39m
+2025-09-15 15:51:46:5146 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 200[39m
+2025-09-15 15:52:02:522 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 200[39m
+2025-09-15 15:58:12:5812 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-15 15:58:12:5812 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-15 15:58:12:5812 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-15 15:58:12:5812 [36minfo[39m: [36mIncoming request: GET /pod-view?page=0&limit=10&search=&delivery_date_from=2025-09-15&delivery_date_to=2025-09-15[39m
+2025-09-15 15:58:12:5812 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-15 15:58:12:5812 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
+2025-09-15 15:58:13:5813 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 304[39m
+2025-09-15 15:58:13:5813 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 304[39m
+2025-09-15 15:58:13:5813 [36minfo[39m: [36mRequest finished: GET /pod-view?page=0&limit=10&search=&delivery_date_from=2025-09-15&delivery_date_to=2025-09-15 - Status: 304[39m
+2025-09-15 15:58:29:5829 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 304[39m
+2025-09-15 16:03:36:336 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 16:03:37:337 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 16:03:37:337 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 16:12:33:1233 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-15 16:12:34:1234 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
+2025-09-15 16:13:07:137 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-15 16:13:07:137 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
+2025-09-15 16:15:35:1535 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-15 16:15:35:1535 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
+2025-09-15 16:17:48:1748 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-15 16:17:48:1748 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
+2025-09-15 16:21:42:2142 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-15 16:21:42:2142 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
+2025-09-15 16:53:35:5335 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-15 16:53:35:5335 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-15 16:53:35:5335 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-15 16:53:35:5335 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 500[39m
+2025-09-15 16:53:35:5335 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-15 16:53:35:5335 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 500[39m
+2025-09-15 16:53:35:5335 [36minfo[39m: [36mIncoming request: GET /pod-view?page=0&limit=10&search=&delivery_date_from=2025-09-15&delivery_date_to=2025-09-15[39m
+2025-09-15 16:53:35:5335 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-15 16:53:35:5335 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-15 16:53:35:5335 [36minfo[39m: [36mRequest finished: GET /pod-view?page=0&limit=10&search=&delivery_date_from=2025-09-15&delivery_date_to=2025-09-15 - Status: 500[39m
+2025-09-15 16:53:35:5335 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-15 16:53:35:5335 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 500[39m
+2025-09-15 16:53:47:5347 [36minfo[39m: [36mIncoming request: POST /auth/login[39m
+2025-09-15 16:53:49:5349 [36minfo[39m: [36mRequest finished: POST /auth/login - Status: 200[39m
+2025-09-15 16:53:49:5349 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-15 16:53:49:5349 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
+2025-09-15 16:53:50:5350 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-15 16:53:50:5350 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-15 16:53:50:5350 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-15 16:53:50:5350 [36minfo[39m: [36mIncoming request: GET /pod-view?page=0&limit=10&search=&delivery_date_from=2025-09-15&delivery_date_to=2025-09-15[39m
+2025-09-15 16:53:50:5350 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 200[39m
+2025-09-15 16:53:50:5350 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 200[39m
+2025-09-15 16:53:50:5350 [36minfo[39m: [36mRequest finished: GET /pod-view?page=0&limit=10&search=&delivery_date_from=2025-09-15&delivery_date_to=2025-09-15 - Status: 200[39m
+2025-09-15 16:53:51:5351 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 200[39m
+2025-09-15 17:04:22:422 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-15 17:04:22:422 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
+2025-09-15 17:08:13:813 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-15 17:08:13:813 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 304[39m
+2025-09-15 17:08:42:842 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-15 17:08:42:842 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 304[39m
+2025-09-15 17:09:56:956 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-15 17:09:57:957 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 304[39m
+2025-09-15 17:12:40:1240 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-15 17:12:40:1240 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-15 17:12:40:1240 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-15 17:12:40:1240 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-15 17:12:40:1240 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
+2025-09-15 17:12:40:1240 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 304[39m
+2025-09-15 17:12:40:1240 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 304[39m
+2025-09-15 17:12:41:1241 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 304[39m
+2025-09-15 17:12:57:1257 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-15 17:12:57:1257 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-15 17:12:57:1257 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-15 17:12:57:1257 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-15 17:12:57:1257 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
+2025-09-15 17:12:57:1257 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 304[39m
+2025-09-15 17:12:57:1257 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 304[39m
+2025-09-15 17:12:58:1258 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 304[39m
+2025-09-15 17:13:41:1341 [36minfo[39m: [36mIncoming request: GET /pod-view?page=0&limit=10&search=&delivery_date_from=2025-09-15&delivery_date_to=2025-09-15[39m
+2025-09-15 17:13:42:1342 [36minfo[39m: [36mRequest finished: GET /pod-view?page=0&limit=10&search=&delivery_date_from=2025-09-15&delivery_date_to=2025-09-15 - Status: 304[39m
+2025-09-15 17:27:59:2759 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-15 17:27:59:2759 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-15 17:27:59:2759 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-15 17:27:59:2759 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-15 17:27:59:2759 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
+2025-09-15 17:27:59:2759 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 304[39m
+2025-09-15 17:27:59:2759 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 304[39m
+2025-09-15 17:28:00:280 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 304[39m
+2025-09-15 17:41:22:4122 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 17:41:24:4124 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 17:41:24:4124 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 17:42:17:4217 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 17:42:18:4218 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 17:42:19:4219 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 17:42:26:4226 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 17:42:27:4227 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 17:42:27:4227 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 17:42:30:4230 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 17:42:31:4231 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 17:42:32:4232 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 17:44:28:4428 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 17:44:29:4429 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 17:44:30:4430 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 17:47:18:4718 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 17:47:19:4719 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 17:47:19:4719 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 17:47:46:4746 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 17:47:47:4747 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 17:47:47:4747 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 17:53:26:5326 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 17:53:27:5327 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 17:53:27:5327 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 17:54:18:5418 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 17:54:19:5419 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 17:54:20:5420 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 17:55:16:5516 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 17:55:17:5517 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 17:55:17:5517 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 17:55:37:5537 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 17:55:38:5538 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 17:55:39:5539 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 17:56:33:5633 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 17:56:35:5635 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 17:56:35:5635 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 17:56:45:5645 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 17:56:46:5646 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 17:56:46:5646 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 17:59:22:5922 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 17:59:23:5923 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 17:59:24:5924 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 17:59:44:5944 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 17:59:45:5945 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 17:59:45:5945 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 17:59:52:5952 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-15 17:59:52:5952 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-15 17:59:52:5952 [36minfo[39m: [36mConnected to redis[39m
+2025-09-15 18:13:27:1327 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-15 18:13:27:1327 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-15 18:13:27:1327 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 500[39m
+2025-09-15 18:13:27:1327 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-15 18:13:27:1327 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-15 18:13:27:1327 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-15 18:13:27:1327 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 500[39m
+2025-09-15 18:13:27:1327 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-15 18:13:27:1327 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-15 18:13:27:1327 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 500[39m
+2025-09-15 18:13:27:1327 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-15 18:13:27:1327 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 500[39m
+2025-09-16 09:32:33:3233 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-16 09:32:34:3234 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-16 09:32:34:3234 [36minfo[39m: [36mConnected to redis[39m
+2025-09-16 09:33:00:330 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-16 09:33:00:330 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 09:33:00:330 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 500[39m
+2025-09-16 09:33:08:338 [36minfo[39m: [36mIncoming request: POST /auth/login[39m
+2025-09-16 09:33:08:338 [36minfo[39m: [36mRequest finished: POST /auth/login - Status: 200[39m
+2025-09-16 09:33:08:338 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-16 09:33:09:339 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 200[39m
+2025-09-16 09:33:11:3311 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-16 09:33:11:3311 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-16 09:33:11:3311 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-16 09:33:11:3311 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 200[39m
+2025-09-16 09:33:11:3311 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 200[39m
+2025-09-16 09:33:11:3311 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 200[39m
+2025-09-16 09:42:54:4254 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-16 09:42:54:4254 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-16 09:42:54:4254 [36minfo[39m: [36mConnected to redis[39m
+2025-09-16 09:42:57:4257 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-16 09:42:58:4258 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-16 09:42:58:4258 [36minfo[39m: [36mConnected to redis[39m
+2025-09-16 09:43:36:4336 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-16 09:43:36:4336 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-16 09:43:36:4336 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-16 09:43:36:4336 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-16 09:43:37:4337 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
+2025-09-16 09:43:37:4337 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-16 09:43:37:4337 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
+2025-09-16 09:43:37:4337 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 304[39m
+2025-09-16 09:43:37:4337 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 304[39m
+2025-09-16 09:43:37:4337 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-16 09:43:37:4337 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-16 09:43:37:4337 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 304[39m
+2025-09-16 09:43:37:4337 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 304[39m
+2025-09-16 09:43:37:4337 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 304[39m
+2025-09-16 09:43:37:4337 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-16 09:43:38:4338 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 304[39m
+2025-09-16 10:06:16:616 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-16 10:06:16:616 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-16 10:06:17:617 [36minfo[39m: [36mConnected to redis[39m
+2025-09-16 10:07:26:726 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-16 10:07:26:726 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-16 10:07:26:726 [36minfo[39m: [36mConnected to redis[39m
+2025-09-16 10:08:18:818 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-16 10:08:19:819 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-16 10:08:19:819 [36minfo[39m: [36mConnected to redis[39m
+2025-09-16 10:09:23:923 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-16 10:09:24:924 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-16 10:09:24:924 [36minfo[39m: [36mConnected to redis[39m
+2025-09-16 10:10:28:1028 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-16 10:10:28:1028 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-16 10:10:28:1028 [36minfo[39m: [36mConnected to redis[39m
+2025-09-16 10:12:02:122 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-16 10:12:03:123 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-16 10:12:03:123 [36minfo[39m: [36mConnected to redis[39m
+2025-09-16 10:12:24:1224 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-16 10:12:25:1225 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-16 10:12:25:1225 [36minfo[39m: [36mConnected to redis[39m
+2025-09-16 10:14:50:1450 [36minfo[39m: [36mIncoming request: GET /select/service-type?[39m
+2025-09-16 10:14:51:1451 [36minfo[39m: [36mRequest finished: GET /select/service-type? - Status: 200[39m
+2025-09-16 10:14:51:1451 [36minfo[39m: [36mIncoming request: GET /select/service-type?[39m
+2025-09-16 10:14:51:1451 [36minfo[39m: [36mRequest finished: GET /select/service-type? - Status: 304[39m
+2025-09-16 10:15:22:1522 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-16 10:15:22:1522 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-16 10:15:22:1522 [36minfo[39m: [36mIncoming request: GET /select/service-type?[39m
+2025-09-16 10:15:22:1522 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-16 10:15:22:1522 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-16 10:15:23:1523 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
+2025-09-16 10:15:23:1523 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 304[39m
+2025-09-16 10:15:23:1523 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 304[39m
+2025-09-16 10:15:23:1523 [36minfo[39m: [36mRequest finished: GET /select/service-type? - Status: 304[39m
+2025-09-16 10:15:23:1523 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 304[39m
+2025-09-16 10:15:25:1525 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-16 10:15:25:1525 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-16 10:15:25:1525 [36minfo[39m: [36mIncoming request: GET /select/service-type?[39m
+2025-09-16 10:15:25:1525 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-16 10:15:25:1525 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-16 10:15:25:1525 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 304[39m
+2025-09-16 10:15:25:1525 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 304[39m
+2025-09-16 10:15:25:1525 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
+2025-09-16 10:15:26:1526 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 304[39m
+2025-09-16 10:15:26:1526 [36minfo[39m: [36mRequest finished: GET /select/service-type? - Status: 304[39m
+2025-09-16 10:15:26:1526 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-16 10:15:26:1526 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-16 10:15:26:1526 [36minfo[39m: [36mIncoming request: GET /select/service-type?[39m
+2025-09-16 10:15:26:1526 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-16 10:15:26:1526 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-16 10:15:26:1526 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-16 10:15:26:1526 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-16 10:15:26:1526 [36minfo[39m: [36mIncoming request: GET /select/service-type?[39m
+2025-09-16 10:15:26:1526 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-16 10:15:26:1526 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-16 10:15:26:1526 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 200[39m
+2025-09-16 10:15:26:1526 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 200[39m
+2025-09-16 10:15:26:1526 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 200[39m
+2025-09-16 10:15:26:1526 [36minfo[39m: [36mRequest finished: GET /select/service-type? - Status: 200[39m
+2025-09-16 10:15:26:1526 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 200[39m
+2025-09-16 10:15:48:1548 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-16 10:15:48:1548 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-16 10:15:49:1549 [36minfo[39m: [36mConnected to redis[39m
+2025-09-16 10:15:57:1557 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-16 10:15:57:1557 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-16 10:15:57:1557 [36minfo[39m: [36mIncoming request: GET /select/service-type?[39m
+2025-09-16 10:15:57:1557 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-16 10:15:57:1557 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-16 10:15:57:1557 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 304[39m
+2025-09-16 10:15:57:1557 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 304[39m
+2025-09-16 10:15:57:1557 [36minfo[39m: [36mRequest finished: GET /select/service-type? - Status: 200[39m
+2025-09-16 10:15:57:1557 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 304[39m
+2025-09-16 10:15:58:1558 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 304[39m
+2025-09-16 10:34:27:3427 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-16 10:34:27:3427 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:34:27:3427 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 500[39m
+2025-09-16 10:34:27:3427 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-16 10:34:27:3427 [36minfo[39m: [36mIncoming request: GET /select/service-type?[39m
+2025-09-16 10:34:27:3427 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-16 10:34:27:3427 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-16 10:34:28:3428 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:34:28:3428 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 500[39m
+2025-09-16 10:34:28:3428 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:34:28:3428 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 500[39m
+2025-09-16 10:34:28:3428 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:34:28:3428 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 500[39m
+2025-09-16 10:34:28:3428 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-16 10:34:28:3428 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-16 10:34:28:3428 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-16 10:34:28:3428 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:34:28:3428 [36minfo[39m: [36mRequest finished: GET /select/service-type? - Status: 500[39m
+2025-09-16 10:34:28:3428 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:34:28:3428 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 500[39m
+2025-09-16 10:34:28:3428 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:34:28:3428 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 500[39m
+2025-09-16 10:34:28:3428 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:34:28:3428 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 500[39m
+2025-09-16 10:34:28:3428 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-16 10:34:28:3428 [36minfo[39m: [36mIncoming request: GET /select/service-type?[39m
+2025-09-16 10:34:28:3428 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:34:28:3428 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 500[39m
+2025-09-16 10:34:28:3428 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:34:28:3428 [36minfo[39m: [36mRequest finished: GET /select/service-type? - Status: 500[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mIncoming request: GET /select/service-type?[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-16 10:35:48:3548 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 500[39m
+2025-09-16 10:35:48:3548 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 500[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mIncoming request: GET /select/principal?[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-16 10:35:48:3548 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mRequest finished: GET /select/service-type? - Status: 500[39m
+2025-09-16 10:35:48:3548 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mRequest finished: GET /select/principal? - Status: 500[39m
+2025-09-16 10:35:48:3548 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 500[39m
+2025-09-16 10:35:48:3548 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 500[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mIncoming request: GET /select/user-location?[39m
+2025-09-16 10:35:48:3548 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mRequest finished: GET /select/user-location? - Status: 500[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mIncoming request: GET /select/ship-point?[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mIncoming request: GET /select/service-type?[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mIncoming request: GET /auth/session[39m
+2025-09-16 10:35:48:3548 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mRequest finished: GET /select/ship-point? - Status: 500[39m
+2025-09-16 10:35:48:3548 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mRequest finished: GET /auth/session - Status: 500[39m
+2025-09-16 10:35:48:3548 [31merror[39m: [31mError occurred: Access Denied: Invalid Token[39m
+2025-09-16 10:35:48:3548 [36minfo[39m: [36mRequest finished: GET /select/service-type? - Status: 500[39m
+2025-09-16 15:59:09:599 [36minfo[39m: [36mServer is running on http://localhost:8080 in development mode[39m
+2025-09-16 15:59:09:599 [36minfo[39m: [36mConnected to Helios DB[39m
+2025-09-16 15:59:10:5910 [36minfo[39m: [36mConnected to redis[39m

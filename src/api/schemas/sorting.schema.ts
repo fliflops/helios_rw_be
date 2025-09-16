@@ -16,3 +16,14 @@ export const createBarcodeSchema = z.object({
 })
 
 export type createBarcodeType = z.infer<typeof createBarcodeSchema>
+
+export const getSortingCountSchema = z.object({
+    service_type:       z.string(),
+    principal:          z.string(),
+    ship_to_code:       z.string().optional(),
+    location_code:      z.string(),
+    delivery_date_from: z.string(),
+    delivery_date_to:   z.string()
+})
+
+export type getSortingCountType = z.infer<typeof getSortingCountSchema>

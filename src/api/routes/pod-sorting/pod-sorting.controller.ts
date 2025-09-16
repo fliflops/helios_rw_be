@@ -1,9 +1,11 @@
 import { NextFunction, Request, Response } from 'express';
-import { createBarcodeSchema, createBarcodeType, getBarcodeSchema, getBarcodeSchemaType } from '../../schemas/sorting.schema';
+import { createBarcodeSchema, createBarcodeType, getBarcodeSchema, getBarcodeSchemaType, getSortingCountSchema,getSortingCountType } from '../../schemas/sorting.schema';
 import { createBarcode, generateBarcode, getPaginatedBarcodes } from '../../../services/sorting.service';
+import {getBookingRequestCount} from '../../../services/booking-request.service';
 
 import searchHelper from '../../../helpers/search.helper';
 import heliosDB from '../../../database/helios';
+import { Op } from 'sequelize';
 
 
 interface controllerInterface {
@@ -25,7 +27,6 @@ export const getBarcodes:controllerInterface = async(req,res,next) => {
             location: location ?? '',
             ...query,
             ...searchFilter
-            //search
         })
 
         res.status(200).json({
@@ -66,4 +67,33 @@ export const createBarcodes: controllerInterface = async(req,res,next) => {
         next(e)
         
     }    
+}
+
+export const getSortedInvoiceCount: controllerInterface = async(req,res,next) => {
+    try{
+        const query: getSortingCountType = getSortingCountSchema.parse(req.query);
+
+        const data = await getBookingRequestCount({
+            ...query,
+            delivery_date: {
+                [Op.between] :[query.delivery_date_from, query.delivery_date_to]
+            }
+        })
+
+        res.status(200).json({
+            invoice_count: data
+        })
+    }   
+    catch(e){
+        next(e)
+    }
+}
+
+export const createPodSortingSession: controllerInterface = async(req,res,next) => {
+    try{
+
+    }
+    catch(e){
+        next(e)
+    }
 }

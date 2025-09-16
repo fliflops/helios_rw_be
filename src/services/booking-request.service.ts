@@ -23,3 +23,10 @@ export const getPaginatedBookingRequest = async(filters: podSchema.getPODSChemaT
     }
 }
 
+export const getBookingRequestCount = async(filters: any) => {
+    return await models.booking_request_hdr_tbl.count({
+        where:{
+            ...filters
+        }
+    })
+}
