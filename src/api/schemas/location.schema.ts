@@ -14,5 +14,10 @@ export const getLocationSchema = createLocationSchema.partial().extend({
     id: z.uuid().nullable().optional(),
 })
 
+export const locationIdSchema = z.object({
+    id: z.uuid()
+})
+
 export type createLocationType = z.infer<typeof createLocationSchema>
 export type getLocationSchemaType = z.infer<typeof getLocationSchema>
+export type locationIdSchemaType = z.infer<typeof locationIdSchema>

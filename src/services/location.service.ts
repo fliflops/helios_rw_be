@@ -22,3 +22,6 @@ export const getLocations = async (filters: getLocationSchemaType) => {
     }
 }
 
+export const getLocationById = async (id: string) => {
+    return await models.location_tbl.findByPk(id)
+}

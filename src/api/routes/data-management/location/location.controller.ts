@@ -52,3 +52,17 @@ export const getLocations = async (req: Request, res: Response, next: NextFuncti
         next(e)
     }
 }
+
+
+export const getLocationDetails = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        //note to follow trip number, rud, delivery and br status
+        const { id } = locationSchema.locationIdSchema.parse(req.params);
+        const data = await locationRequestService.getLocationById(id);
+
+        res.status(200).json(data)
+    }
+    catch (e) {
+        next(e)
+    }
+}
