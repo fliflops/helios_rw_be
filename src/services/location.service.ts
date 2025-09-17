@@ -1,19 +1,24 @@
+import { getLocationSchemaType } from '../api/schemas/location.schema';
 import heliosDB from '../database/helios';
 
 const models = heliosDB.models
 
-export const getUserLocations = async(filters:any) => {
-    return await models.user_location_tbl.findAll({
-        include: [
-            {
-                model: models.location_tbl,
-                as:'location'
-            }
-        ],
-        where:{
-            ...filters
+export const getLocations = async (filters: getLocationSchemaType) => {
+    const { page, limit, search, ...where } = filters;
+
+    const { rows, count } = await models.location_tbl.findAndCountAll({
+        order: [['created_at', 'desc'], ['loc_name', 'asc']],
+        offset: +page * +limit,
+        limit: +limit,
+        where: {
+            ...where
         }
     })
-    .then(result => JSON.parse(JSON.stringify(result)))
+
+    return {
+        rows,
+        count,
+        pageCount: Math.ceil(count / +limit)
+    }
 }
 
