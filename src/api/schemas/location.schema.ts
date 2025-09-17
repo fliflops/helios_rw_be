@@ -7,8 +7,6 @@ export const createLocationSchema = z.object({
     is_active: z.boolean()
 })
 
-export type createLocationType = z.infer<typeof createLocationSchema>
-
 export const getLocationSchema = createLocationSchema.partial().extend({
     page: z.string(),
     limit: z.string(),
@@ -16,4 +14,5 @@ export const getLocationSchema = createLocationSchema.partial().extend({
     id: z.uuid().nullable().optional(),
 })
 
+export type createLocationType = z.infer<typeof createLocationSchema>
 export type getLocationSchemaType = z.infer<typeof getLocationSchema>
