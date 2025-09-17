@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import * as locationService from '../../../services/location.service';
+import * as locationService from '../../../services/user-location.service';
 import * as ShipPointService from '../../../services/ship-point.service';
 import * as PrincipalService from '../../../services/principal.service';
 import * as ServiceTypeService from '../../../services/service-type.service';
@@ -16,7 +16,7 @@ export const getUserLocations:controllerInterface = async(req,res,next) => {
     try{
         const user = req.processor.id;
 
-        const data = await locationService.getUserLocations({
+        const data = await locationService.getSelectUserLocations({
             user_id: user,
             is_active: true
         })
@@ -35,7 +35,7 @@ export const getUserLocations:controllerInterface = async(req,res,next) => {
 
 export const getShipPoints:controllerInterface = async(req,res,next) => {
     try{
-        const data = await ShipPointService.getShipPoints({
+        const data = await ShipPointService.getSelectShipPoints({
             is_active:1
         })
 
@@ -54,7 +54,7 @@ export const getShipPoints:controllerInterface = async(req,res,next) => {
 
 export const getPrincipals: controllerInterface = async(req,res,next) => {
     try{
-        const data = await PrincipalService.getPrincipals({
+        const data = await PrincipalService.getSelectPrincipals({
             is_active: 1
         })
 
