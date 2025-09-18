@@ -1,11 +1,11 @@
-import { getPrincipalSchemaType } from '../api/schemas/principal.schema';
+import { getPrincipalSchemaType, updatePrincipalType } from '../api/schemas/principal.schema';
 import heliosDB from '../database/helios';
 
 const models = heliosDB.models
 
-export const getSelectPrincipals = async(filters:any) => {
+export const getSelectPrincipals = async (filters: any) => {
     return await models.customer_master_tbl.findAll({
-        where:{
+        where: {
             ...filters
         }
     })
@@ -31,8 +31,20 @@ export const getPrincipals = async (filters: getPrincipalSchemaType) => {
     }
 }
 
-
 export const getPrincipalById = async (id: string) => {
     return await models.customer_master_tbl.findByPk(id);
 }
 
+export const updatePrincipalById = async (id: string, payload: updatePrincipalType) => {
+
+    try {
+        const [count] = await models.customer_master_tbl.update(payload, { where: { id } });
+        if (count > 0 ) {
+            return await getPrincipalById(id);
+        }
+    } catch (err: any) {
+        throw new Error(err.message ? err.message : "Unable to update principal")
+    }
+
+    throw new Error("Nothing to change")
+}

@@ -64,3 +64,18 @@ export const getPrincipalDetails = async (req: Request, res: Response, next: Nex
         next(e)
     }
 }
+
+export const updatePrincipalDetails = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        //note to follow trip number, rud, delivery and br status
+        const { id } = principalSchema.principalIdSchema.parse(req.params);
+        const payload = principalSchema.updatePrincipalSchema.parse(req.body);
+
+        const data = await principalRequestService.updatePrincipalById(id, payload);
+
+        res.status(200).json(data)
+    }
+    catch (e) {
+        next(e)
+    }
+}

@@ -12,6 +12,8 @@ export const createPrincipalSchema = z.object({
     postal_code: z.string().optional()
 })
 
+export const updatePrincipalSchema = createPrincipalSchema.partial()
+
 export const getPrincipalSchema = createPrincipalSchema.partial().extend({
     page: z.string(),
     limit: z.string(),
@@ -23,5 +25,6 @@ export const principalIdSchema = z.object({
 })
 
 export type createPrincipalType = z.infer<typeof createPrincipalSchema>
+export type updatePrincipalType = z.infer<typeof updatePrincipalSchema>
 export type getPrincipalSchemaType = z.infer<typeof getPrincipalSchema>
 export type principalIdSchemaType = z.infer<typeof principalIdSchema>
