@@ -20,7 +20,6 @@ type filterTypes = {
 
 export const getLocations = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        //note to follow trip number, rud, delivery and br status
         const { page, limit, search, ...query }: locationSchema.getLocationSchemaType = locationSchema.getLocationSchema.parse(req.query)
         let filters: filterTypes = query;
         let newFilters: filterTypes = {};
@@ -55,7 +54,6 @@ export const getLocations = async (req: Request, res: Response, next: NextFuncti
 
 export const getLocationDetails = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        //note to follow trip number, rud, delivery and br status
         const { id } = locationSchema.locationIdSchema.parse(req.params);
         const data = await locationRequestService.getLocationById(id);
 
@@ -68,11 +66,22 @@ export const getLocationDetails = async (req: Request, res: Response, next: Next
 
 export const updateLocationDetails = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        //note to follow trip number, rud, delivery and br status
         const { id } = locationSchema.locationIdSchema.parse(req.params);
         const payload = locationSchema.updateLocationSchema.parse(req.body);
 
         const data = await locationRequestService.updateLocationById(id, payload);
+
+        res.status(200).json(data)
+    }
+    catch (e) {
+        next(e)
+    }
+}
+
+export const createLocation = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const payload = locationSchema.createLocationSchema.parse(req.body);
+        const data = await locationRequestService.createLocation(payload);
 
         res.status(200).json(data)
     }

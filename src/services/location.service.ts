@@ -1,4 +1,4 @@
-import { getLocationSchemaType, updateLocationType } from '../api/schemas/location.schema';
+import { createLocationType, getLocationSchemaType, updateLocationType } from '../api/schemas/location.schema';
 import heliosDB from '../database/helios';
 
 const models = heliosDB.models
@@ -30,7 +30,7 @@ export const updateLocationById = async (id: string, payload: updateLocationType
 
     try {
         const [count] = await models.location_tbl.update(payload, { where: { id } });
-        if (count > 0 ) {
+        if (count > 0) {
             return await getLocationById(id);
         }
     } catch (err: any) {
@@ -38,4 +38,8 @@ export const updateLocationById = async (id: string, payload: updateLocationType
     }
 
     throw new Error("Nothing to change")
+}
+
+export const createLocation = async (payload: createLocationType) => {
+    return await models.location_tbl.create({ ...payload });
 }
