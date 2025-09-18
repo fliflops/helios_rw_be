@@ -1,4 +1,4 @@
-import { getLocationSchemaType } from '../api/schemas/location.schema';
+import { getLocationSchemaType, updateLocationType } from '../api/schemas/location.schema';
 import heliosDB from '../database/helios';
 
 const models = heliosDB.models
@@ -24,4 +24,18 @@ export const getLocations = async (filters: getLocationSchemaType) => {
 
 export const getLocationById = async (id: string) => {
     return await models.location_tbl.findByPk(id)
+}
+
+export const updateLocationById = async (id: string, payload: updateLocationType) => {
+
+    try {
+        const [count] = await models.location_tbl.update(payload, { where: { id } });
+        if (count > 0 ) {
+            return await getLocationById(id);
+        }
+    } catch (err: any) {
+        throw new Error(err.message ? err.message : "Unable to update location")
+    }
+
+    throw new Error("Nothing to change")
 }
