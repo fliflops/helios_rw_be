@@ -80,3 +80,15 @@ export const updateShipPointDetails = async (req: Request, res: Response, next: 
         next(e)
     }
 }
+
+export const createShipPoint = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const payload = shipPointSchema.createShipPointSchema.parse(req.body);
+        const data = await shipPointRequestService.createShipPoint(payload);
+
+        res.status(200).json(data)
+    }
+    catch (e) {
+        next(e)
+    }
+}

@@ -1,4 +1,4 @@
-import { updateShipPointType } from '../api/schemas/ship-point.schema';
+import { createShipPointType, updateShipPointType } from '../api/schemas/ship-point.schema';
 import heliosDB from '../database/helios';
 
 const models = heliosDB.models;
@@ -48,4 +48,8 @@ export const updateShipPointById = async (id: string, payload: updateShipPointTy
     }
 
     throw new Error("Nothing to change")
+}
+
+export const createShipPoint = async (payload: createShipPointType) => {
+    return await models.ship_point_master_tbl.create({ ...payload });
 }
