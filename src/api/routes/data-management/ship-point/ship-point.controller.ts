@@ -52,3 +52,31 @@ export const getShipPoints = async (req: Request, res: Response, next: NextFunct
         next(e)
     }
 }
+
+export const getShipPointDetails = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        //note to follow trip number, rud, delivery and br status
+        const { id } = shipPointSchema.shipPointlIdSchema.parse(req.params);
+        const data = await shipPointRequestService.getShipPointById(id);
+
+        res.status(200).json(data)
+    }
+    catch (e) {
+        next(e)
+    }
+}
+
+export const updateShipPointDetails = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        //note to follow trip number, rud, delivery and br status
+        const { id } = shipPointSchema.shipPointlIdSchema.parse(req.params);
+        const payload = shipPointSchema.updateShipPointSchema.parse(req.body);
+
+        const data = await shipPointRequestService.updateShipPointById(id, payload);
+
+        res.status(200).json(data)
+    }
+    catch (e) {
+        next(e)
+    }
+}

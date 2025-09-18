@@ -12,11 +12,19 @@ export const createShipPointSchema = z.object({
     is_active: z.boolean()
 })
 
+export const updateShipPointSchema = createShipPointSchema.partial()
+
 export const getShipPointSchema = createShipPointSchema.partial().extend({
     page: z.string(),
     limit: z.string(),
     search: z.string().nullable().optional(),
 })
 
+export const shipPointlIdSchema = z.object({
+    id: z.uuid()
+})
+
 export type createShipPointType = z.infer<typeof createShipPointSchema>
+export type updateShipPointType = z.infer<typeof updateShipPointSchema>
 export type getShipPointSchemaType = z.infer<typeof getShipPointSchema>
+export type shipPointIdSchemaType = z.infer<typeof shipPointlIdSchema>
