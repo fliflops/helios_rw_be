@@ -1,4 +1,4 @@
-import { getPrincipalSchemaType, updatePrincipalType } from '../api/schemas/principal.schema';
+import { createPrincipalType, getPrincipalSchemaType, updatePrincipalType } from '../api/schemas/principal.schema';
 import heliosDB from '../database/helios';
 
 const models = heliosDB.models
@@ -47,4 +47,8 @@ export const updatePrincipalById = async (id: string, payload: updatePrincipalTy
     }
 
     throw new Error("Nothing to change")
+}
+
+export const createPrincipal = async (payload: createPrincipalType) => {
+    return await models.customer_master_tbl.create({ ...payload });
 }

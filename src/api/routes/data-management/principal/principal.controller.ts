@@ -79,3 +79,15 @@ export const updatePrincipalDetails = async (req: Request, res: Response, next: 
         next(e)
     }
 }
+
+export const createPrincipal = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const payload = principalSchema.createPrincipalSchema.parse(req.body);
+        const data = await principalRequestService.createPrincipal(payload);
+
+        res.status(200).json(data)
+    }
+    catch (e) {
+        next(e)
+    }
+}
