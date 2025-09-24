@@ -3,6 +3,7 @@ import * as locationService from '../../../services/user-location.service';
 import * as ShipPointService from '../../../services/ship-point.service';
 import * as PrincipalService from '../../../services/principal.service';
 import * as ServiceTypeService from '../../../services/service-type.service';
+import { getAllSortingSessionDetails } from '../../../services/sorting.service';
 interface controllerInterface {
     (req:Request, response: Response, next: NextFunction): void
 }
@@ -82,6 +83,23 @@ export const getServiceTypes: controllerInterface = async(req,res,next) => {
                 }
             })
         )
+    }
+    catch(e){
+        next(e)
+    }
+}
+
+export const getInvoiceForSorting: controllerInterface = async(req,res,next) => {
+    try{
+        const id = req.processor.id;
+
+        const invoices = await getAllSortingSessionDetails({
+            user_id: id
+        })
+
+        console.log(invoices)
+
+        res.end(invoices)
     }
     catch(e){
         next(e)

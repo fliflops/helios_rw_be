@@ -27,3 +27,23 @@ export const getSortingCountSchema = z.object({
 })
 
 export type getSortingCountType = z.infer<typeof getSortingCountSchema>
+
+export const getPodSchema = z.object({
+    dr_no: z.string().optional(),
+    invoice_no: z.string().optional()
+})
+
+export type getPodType = z.infer<typeof getPodSchema>
+
+export const getAllPodSchema = z.object({
+    is_assigned: z.string()
+})
+
+export type getAllPodType = z.infer<typeof getAllPodSchema>
+
+export const assignBarcodeSchema = z.object({
+    barcode: z.string(),
+    key: z.string()
+})
+
+export  type assignBarcodeType = z.infer<typeof assignBarcodeSchema>

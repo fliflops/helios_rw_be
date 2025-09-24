@@ -1,3 +1,4 @@
+import { InferAttributes, InferCreationAttributes } from 'sequelize';
 import { Table, Column, Model, DataType, PrimaryKey } from 'sequelize-typescript';
 
 @Table({
@@ -7,7 +8,7 @@ import { Table, Column, Model, DataType, PrimaryKey } from 'sequelize-typescript
   createdAt: 'created_at',
   updatedAt: 'updated_at'
 })
-export default class sorting_tbl extends Model {
+export default class sorting_tbl extends Model<InferAttributes<sorting_tbl>,InferCreationAttributes<sorting_tbl>> {
     @PrimaryKey
     @Column({
         defaultValue: DataType.UUIDV4,
