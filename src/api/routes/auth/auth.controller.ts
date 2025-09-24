@@ -94,8 +94,7 @@ export const getSession = async(req:Request,res:Response,next:NextFunction) => {
         const sessionId = decodeToken.session_id;
         
         const {user} = await getSessionData(sessionId);
-        console.log(user)
-
+       
         //to follow
        // const role = await getRedisRole(user.role_id);
 

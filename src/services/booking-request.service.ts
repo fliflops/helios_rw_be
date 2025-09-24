@@ -1,5 +1,6 @@
 import heliosDB from '../database/helios';
 import * as podSchema from '../api/schemas/view-pod.schemas';
+import redis from '../utils/redis';
 
 const models = heliosDB.models
 
@@ -30,3 +31,13 @@ export const getBookingRequestCount = async(filters: any) => {
         }
     })
 }
+
+export const getBookingRequests = async(filters: any) => {
+    return await models.booking_request_hdr_tbl.findAll({
+        where:{
+            ...filters
+        }
+    })
+    .then(result => JSON.parse(JSON.stringify(result)))
+}
+

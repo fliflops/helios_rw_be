@@ -1,7 +1,9 @@
 import moment from 'moment';
-import { getBarcodeSchemaType } from '../api/schemas/sorting.schema';
+import { getBarcodeSchemaType, getSortingCountType } from '../api/schemas/sorting.schema';
 import heliosDB from '../database/helios';
-import { col, fn, Op, Transaction, where } from 'sequelize';
+import { col, fn, InferAttributes, InferCreationAttributes, Op, Transaction, where } from 'sequelize';
+import redis from '../utils/redis'
+import sorting_tbl from '../database/helios/models/sorting_tbl';
 
 const models = heliosDB.models;
 
@@ -68,3 +70,133 @@ export const createBarcode = async(params: {barcodes:string[]; created_by: strin
         transaction
     })
 }
+
+export const getBarcode = async(filter:any) => {
+    return await models.sorting_tbl.findOne({
+        where:{
+            ...filter
+        }
+    }) as sorting_tbl
+
+} 
+
+export const getAllBarcodes = async(filter:any) => {
+    return await models.sorting_tbl.findAll({
+        where:{
+            ...filter
+        }
+    }) as sorting_tbl[]
+}
+
+export const createSortingSession = async(params:{
+    header: {
+        user_id:string;
+        location_code: string;
+        ship_to_code?:string;
+        service_type: string;
+        delivery_date_from: string;
+        delivery_date_to: string
+    };
+    details: { id: string; br_no:string, invoice_no:string, dr_no:string,user_id: string }[]
+}) => {
+    // create sorting header
+    const headerKey = `helios:sorting_session:${params.header.user_id}`
+    const headerValue = JSON.stringify({
+        ...params.header
+    })
+    
+    //create sorting details
+    let details:{
+        [key:string]: string
+    } = {}
+
+    params.details.map(item => {
+        const key = `helios:sorting_details:${item.user_id}:${item.br_no}`
+        details[key] = JSON.stringify({
+            ...item,
+            is_assigned: false,
+            barcode: null
+        }) 
+    })
+
+   await redis.multi()
+    .set(headerKey,headerValue)
+    .mSet(details)
+    .exec();
+}
+
+export const getSortingSession = async(user_id:string) => {
+    
+    const sortingFilters = await redis.get(`helios:sorting_session:${user_id}`).then(result => {
+        if(!result) return null; 
+        return JSON.parse(result) as getSortingCountType
+    })
+    if(sortingFilters) return sortingFilters
+    return null
+}
+
+export const getAllSortingSessionDetails = async(params: {user_id:string}) => {
+    const detailKeys = await redis.keys(`helios:sorting_details:${params.user_id}:*`)
+    const details = await redis.mGet(detailKeys);
+
+    return details.map((item,index) => {
+        return {
+            key: detailKeys[index],
+            data:JSON.parse(item as string) as {
+                dr_no:string;
+                invoice_no:string;
+                is_assigned: boolean;
+                br_no:string;
+                service_type:string;
+                shipment_manifest:string;
+                ship_to_code:string;
+                barcode: string
+            }
+           
+        }
+    })
+}
+
+export const getSortingDetails = async(key: string) => {
+    const pod = await redis.get(key)
+
+    if(!pod) return null;
+    return JSON.parse(pod)
+}
+
+export const updateSortingDetail = async(params: {key:string; 
+    data: {
+        dr_no:string;
+        invoice_no:string;
+        is_assigned: boolean;
+        br_no:string;
+        service_type:string;
+        shipment_manifest:string;
+        ship_to_code:string;
+        barcode: string;
+    }}) => {
+
+    await redis.set(params.key, JSON.stringify(params.data))
+}   
+
+export const cancelSortingSession = async (params: {user_id: string}) => {
+    const headerKey = `helios:sorting_session:${params.user_id}`
+    const detailKeys = await redis.keys(`helios:sorting_details:${params.user_id}:*`)
+
+    await redis.multi()
+    .del(detailKeys.concat([headerKey]))
+    .exec();
+}
+
+export const updateSortingTable = async(params: {data:any; filters: any;}, transaction?: Transaction) => {
+    return await models.sorting_tbl.update({
+        ...params.data
+    },
+    {
+        where:{
+            ...params.filters
+        },
+        transaction
+    })
+}
+

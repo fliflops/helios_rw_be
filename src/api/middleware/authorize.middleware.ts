@@ -9,7 +9,7 @@ export default async(req:Request, res: Response, next: NextFunction) => {
     try{
         
         const token = req.headers['x-access-token'] as string;
-        console.log(token)
+    
         if(!token) throw createHttpError(401,'Access Denied: Invalid Token');
 
         jwt.verify(token, configs.jwt_secret, async(error, decodedToken)=> {
