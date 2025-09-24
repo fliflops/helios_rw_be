@@ -1,3 +1,4 @@
+import { DataTypes } from 'sequelize';
 import { Table, Column, Model, DataType, PrimaryKey } from 'sequelize-typescript';
 
 @Table({
@@ -9,6 +10,12 @@ import { Table, Column, Model, DataType, PrimaryKey } from 'sequelize-typescript
 })
 export default class location_tbl extends Model {
     @PrimaryKey
+    @Column({
+        type: DataType.UUID,
+        defaultValue: DataTypes.UUIDV4
+    })
+    id!:string
+
     @Column
     loc_code!:string
 

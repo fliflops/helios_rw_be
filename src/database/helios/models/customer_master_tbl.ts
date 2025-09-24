@@ -1,3 +1,4 @@
+import { DataTypes } from 'sequelize';
 import { Table, Column, Model, DataType, HasOne, HasMany, PrimaryKey, Unique } from 'sequelize-typescript';
 
 @Table({
@@ -10,7 +11,8 @@ import { Table, Column, Model, DataType, HasOne, HasMany, PrimaryKey, Unique } f
 export default class customer_master_tbl extends Model {
     @PrimaryKey
     @Column({
-        type: DataType.UUID
+        type: DataType.UUID,
+        defaultValue: DataTypes.UUIDV4
     })
     id!:string;
 
