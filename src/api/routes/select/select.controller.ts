@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
-import * as locationService from '../../../services/user-location.service';
+import * as RoleService from '../../../services/role.service';
+import * as LocationService from '../../../services/user-location.service';
 import * as ShipPointService from '../../../services/ship-point.service';
 import * as PrincipalService from '../../../services/principal.service';
 import * as ServiceTypeService from '../../../services/service-type.service';
@@ -17,7 +18,7 @@ export const getUserLocations:controllerInterface = async(req,res,next) => {
     try{
         const user = req.processor.id;
 
-        const data = await locationService.getSelectUserLocations({
+        const data = await LocationService.getSelectUserLocations({
             user_id: user,
             is_active: true
         })
@@ -101,6 +102,24 @@ export const getInvoiceForSorting: controllerInterface = async(req,res,next) => 
 
         res.end(invoices)
     }
+    catch(e){
+        next(e)
+    }
+}
+
+export const getRoles:controllerInterface = async(req,res,next) => {
+    try{
+        const data = await RoleService.getSelectRoles({
+            is_active: true
+        })
+        
+        res.status(200).json(data.map((item:any) => {
+            return {
+                label: item.role_name,
+                value: item.id
+            }
+        }));
+    }   
     catch(e){
         next(e)
     }
