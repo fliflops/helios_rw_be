@@ -26,7 +26,7 @@ export const getPrincipals = async (req: Request, res: Response, next: NextFunct
 
         const searchFilter = searchHelper({
             search: search ?? '',
-            fields: ['loc_code', 'loc_name']
+            fields: ['customer_code','customer_name','customer_desc','customer_address']
         })
 
         Object.keys(filters).map((keys) => {
