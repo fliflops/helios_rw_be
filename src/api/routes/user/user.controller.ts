@@ -30,14 +30,10 @@ export const getUsers = async (req: Request, res: Response, next: NextFunction) 
             fields: ['email', 'first_name', 'last_name']
         })
 
-
-
         Object.keys(filters).map((keys) => {
             const value = filters[keys]
             newFilters[keys] = value
         })
-
-        console.log({ newFilters });
 
         const { rows, count, pageCount } = await userRequestService.getUsers({
             page, limit, search,

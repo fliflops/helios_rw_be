@@ -1,5 +1,6 @@
-import { Table, Column, Model, DataType, PrimaryKey, BelongsTo } from 'sequelize-typescript';
+import { Table, Column, Model, DataType, PrimaryKey, BelongsTo, HasMany } from 'sequelize-typescript';
 import user_tbl from './user_tbl';
+import role_access_tbl2 from './role_access_tbl2';
 
 @Table({
   tableName: 'role_tbl',
@@ -12,6 +13,7 @@ export default class role_tbl extends Model {
     @PrimaryKey
     @Column({
         type: DataType.UUID,
+        defaultValue: DataType.UUIDV4,
     })
     id!: string;
     
@@ -46,4 +48,9 @@ export default class role_tbl extends Model {
     })
     updated_by!: string;
 
+    @HasMany(() => role_access_tbl2, {
+        foreignKey: 'role_id',
+        sourceKey: 'id'
+    })
+    modules!: role_access_tbl2[]
 }

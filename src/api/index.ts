@@ -1,5 +1,6 @@
 import {Router} from 'express'
 import user from './routes/user/user.route';
+import role from './routes/role/role.route';
 import auth from './routes/auth/auth.route';
 import select from './routes/select/select.route';
 import pod_view from './routes/pod-view/pod-view.route';
@@ -15,6 +16,7 @@ router.use('/pod-sorting',  pod_sorting)
 
 router.use('/auth',       auth)
 router.use('/user',       user)
+router.use('/role',       role)
 router.use('/select',     select)
 router.use('/location',   location)
 router.use('/ship-point', ship_point)
