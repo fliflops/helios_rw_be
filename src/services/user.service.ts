@@ -1,6 +1,7 @@
-import { Transaction } from 'sequelize';
+import { col, Transaction } from 'sequelize';
 import heliosDB from '../database/helios';
 import bcrypt from 'bcrypt';
+import { getUserSchemaType, updateUserType } from '../api/schemas/user.schema';
 
 const models = heliosDB.models
 
@@ -9,7 +10,7 @@ interface updateUserInterface  {
 }
 
 interface crateDataInterface {
-    (params:{data:any, transaction: Transaction}) : void
+    (params:{data:any, transaction?: Transaction}) : void
 }
 
 interface bulkCreateDataInterface {
@@ -23,6 +24,7 @@ export const createUser:crateDataInterface = async({data, transaction}) => {
 }
 
 export const updateUser:updateUserInterface = async({data,filters,transaction}) => {
+
     return await models.user_tbl.update({
         ...data
     },
@@ -55,6 +57,51 @@ export const getUser = async(filters: any) => {
     })
 }
 
+export const getUsers = async (filters: getUserSchemaType) => {
+    const { page, limit, search, ...where } = filters;
+
+    const { rows, count } = await models.user_tbl.findAndCountAll({
+        attributes: {
+            exclude: ["password"],
+            include: [
+                [col("role.role_name"), "role_name"],
+            ],
+        },
+        include: [
+            { model: models.role_tbl, as: "role", attributes: []}
+        ],
+        order: [['created_at', 'desc']],
+        offset: +page * +limit,
+        limit: +limit,
+        where: {
+            ...where
+        }
+    })
+
+    return {
+        rows,
+        count,
+        pageCount: Math.ceil(count / +limit)
+    }
+}
+
+export const getUserById = async (id: string) => {
+    return await models.user_tbl.findByPk(id);
+}
+
+export const updateUserById = async (id: string, payload: updateUserType) => {
+    try {
+        const [count] = await models.user_tbl.update(payload, { where: { id } });
+        if (count > 0 ) {
+            return await getUserById(id);
+        }
+    } catch (err: any) {
+        throw new Error(err.message ? err.message : "Unable to update User")
+    }
+
+    throw new Error("Nothing to change")
+}
+
 export const passwordGenerator = async(length:number) => {
     let result = '';
 
@@ -79,6 +126,6 @@ export const validateAuth = async(params: {password:string; hashedPassword: stri
     return bcrypt.compareSync(params.password,params.hashedPassword)
 }
 
-export const hasPassword = async(password:string) => {
+export const hashPassword = async(password:string) => {
     return bcrypt.hashSync(password, 10)
 }

@@ -36,5 +36,9 @@ export default {
         // //     version:true
         // // }
 
-    }   
+    },
+    mailer: {
+        email:     process.env.NODEMAILER_EMAIL,
+        password:  process.env.NODEMAILER_PASSWORD,
+    },
 }
